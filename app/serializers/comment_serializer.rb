@@ -1,6 +1,6 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :content, :user
-  # :activity_id
-  belongs_to :user, except: %i[created_at updated_at]
+  attributes :id, :activity_id, :content, :user
+  # :user_id, :activity_id
+  belongs_to :user
   belongs_to :activity
 end
