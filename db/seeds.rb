@@ -8,6 +8,10 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
+Comment.destroy_all
+UserActivity.destroy_all
+Activity.destroy_all
+User.destroy_all
 
 nathan = User.create(name: 'Nathan', address: '8629 120th Ave NE', city: 'Kirkland', state: 'Washington', zipcode: '98033', image: 'https://res.cloudinary.com/practicaldev/image/fetch/s--HKm-fqRY--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/450996/f8189c80-de3e-453b-95ea-04e39c1fedbf.jpeg')
 taci = User.create(name: 'Taci', address: '8525 120th Ave NE APT #300', city: 'San Francisco', state: 'California', zipcode: '94123', image: 'https://cdn.shopify.com/s/files/1/0087/9247/3657/files/Img-712951_1800x.jpg?v=1551476715')
@@ -21,9 +25,9 @@ underdogs = Activity.create(name: 'The Taco Shop At Underdogs', address: '1824 I
 # user_activities
 ua1 = UserActivity.create(user_id: User.first.id, activity_id: Activity.first.id)
 # comments
-c1 = Comment.create(user_id: User.first.id, activity_id: Activity.first.id, content: Faker::Lorem.paragraph(sentence_count: 2))
-c2 = Comment.create(user_id: User.first.id, activity_id: Activity.first.id, content: Faker::Lorem.paragraph(sentence_count: 4))
-c3 = Comment.create(user_id: User.second.id, activity_id: Activity.second.id, content: Faker::Lorem.paragraph(sentence_count: 4))
-c4 = Comment.create(user_id: User.last.id, activity_id: Activity.last.id, content: Faker::Lorem.paragraph(sentence_count: 4)
+c1 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 2))
+c2 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
+c3 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
+c4 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
 
 puts 'seeded'

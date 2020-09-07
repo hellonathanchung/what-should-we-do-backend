@@ -14,7 +14,7 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def create
-    activity = Activity.new(avctivity_params)
+    activity = Activity.new(activity_params)
 
     if activity.save
       render json: activity
@@ -42,7 +42,7 @@ class Api::V1::ActivitiesController < ApplicationController
 
   private
 
-  def avctivity_params
-    params.require(:avctivity).permit(:id, :name, :address, :city, :state, :zipcode, :description, :image, :category)
+  def activity_params
+    params.require(:activity).permit(:id, :name, :address, :city, :state, :zipcode, :description, :image, :category, :comments)
   end
 end
