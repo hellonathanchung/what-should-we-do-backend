@@ -24,7 +24,7 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def update
-    activity = Activity.find_by(id: params[:id])
+    activity = Activity.find(params[:id])
 
     if activity.save
       render json: activity
@@ -43,6 +43,6 @@ class Api::V1::ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:id, :name, :address, :city, :state, :zipcode, :description, :image, :category, :comments)
+    params.require(:activity).permit(:id, :name, :address, :city, :state, :zipcode, :description, :image, :category, :comments, :likes)
   end
 end
