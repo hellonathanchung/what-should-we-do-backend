@@ -28,6 +28,7 @@ class Api::V1::UserActivitiesController < ApplicationController
   private
 
   def user_activity_params
-    params.require(:user_activity).permit(:id, user_id:, activity_id:)
+    params.require(:user_activity).permit(:id, activity_id:)
+    # params.require(:user_activity).permit(:id, user_id:, activity_id:)
   end
 end

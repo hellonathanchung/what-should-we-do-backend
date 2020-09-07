@@ -23,11 +23,12 @@ starbucks_roastery = Activity.create(name: 'Starbucks Roastery', address: '2043 
 mercury = Activity.create(name: 'Mercurys Coffee', address: '17980 Redmond Way', city: 'Redmond', zipcode: '98052', state: 'WA', category: 'coffee', description: 'Local chain serving coffee drinks, breakfast, sandwiches & baked goods. Some are drive-thru only.', image: 'https://fastly.4sqi.net/img/general/width960/156726_isHEx_jTpO1HoBRNl3CqjCjoo-7i8CJ_J0Wr3jcNTLg.jpg')
 underdogs = Activity.create(name: 'The Taco Shop At Underdogs', address: '1824 Irving St', city: 'San Francisco', state: 'CA', zipcode: '94122', category: 'food', image: 'https://lh3.googleusercontent.com/proxy/YDGkTKS3ZK6qESqagAtP0ZifHUIRQGbQgdH7X4TSnvGd86JsntFbarigVBhOpbnSNMROtf_eAJi4repuMYHTq1mXybriYalTSy2cVQkoW8hD2UbrDvGq1dHNCYB31g-Zee3Pp2GIMVE', description: 'Welcome to The Taco Shop at Underdogs a fusion experiment combining modern taqueria, amazing mexican food and sports, come join us!')
 # user_activities
-ua1 = UserActivity.create(user_id: User.first.id, activity_id: Activity.first.id)
+
+ua1 = UserActivity.create(activity_id: Activity.first.id)
 # comments
-c1 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 2))
-c2 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
-c3 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
-c4 = Comment.create(user_id: User.all.sample.id, activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
+c1 = Comment.create(activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 2))
+c2 = Comment.create(activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
+c3 = Comment.create(activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
+c4 = Comment.create(activity_id: Activity.all.sample.id, content: Faker::Lorem.paragraph(sentence_count: 4))
 
 puts 'seeded'
