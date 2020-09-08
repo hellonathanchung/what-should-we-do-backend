@@ -24,9 +24,9 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def update
-    activity = Activity.find(params[:id])
+    activity = Activity.find_by(id: params[:id])
 
-    if activity.save
+    if activity.update(activity_params)
       render json: activity
     else
       render json: { error: 'Something went wrong' }

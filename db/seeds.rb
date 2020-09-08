@@ -40,7 +40,6 @@ noa = User.create({
 })
 
 # activities
-
 starbucks_roastery = Activity.create({
     name: 'Starbucks Roastery', 
     address: '2043 S 113th St #302', 
@@ -73,6 +72,7 @@ underdogs = Activity.create({
     image: 'https://lh3.googleusercontent.com/proxy/YDGkTKS3ZK6qESqagAtP0ZifHUIRQGbQgdH7X4TSnvGd86JsntFbarigVBhOpbnSNMROtf_eAJi4repuMYHTq1mXybriYalTSy2cVQkoW8hD2UbrDvGq1dHNCYB31g-Zee3Pp2GIMVE', 
     description: 'Welcome to The Taco Shop at Underdogs a fusion experiment combining modern taqueria, amazing mexican food and sports, come join us!'
 })
+
 # user_activities
 ua1 = UserActivity.create({
     user_id: User.first.id, 
