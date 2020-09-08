@@ -47,6 +47,7 @@ starbucks_roastery = Activity.create({
     city: 'Seattle', 
     zipcode: '98168', 
     state: 'WA', 
+    likes: 6, 
     category: 'coffee', 
     description: 'Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.', 
     image: 'https://content-prod-live.cert.starbucks.com/binary/v2/asset/132-45762.jpg'
@@ -54,9 +55,9 @@ starbucks_roastery = Activity.create({
 mercury = Activity.create({
     name: 'Mercurys Coffee', 
     address: '17980 Redmond Way', 
-    city: 'Redmond', 
-    zipcode: '98052', 
+    city: 'Redmond', zipcode: '98052', 
     state: 'WA', 
+    likes: 12, 
     category: 'coffee', 
     description: 'Local chain serving coffee drinks, breakfast, sandwiches & baked goods. Some are drive-thru only.', 
     image: 'https://fastly.4sqi.net/img/general/width960/156726_isHEx_jTpO1HoBRNl3CqjCjoo-7i8CJ_J0Wr3jcNTLg.jpg'
@@ -67,11 +68,11 @@ underdogs = Activity.create({
     city: 'San Francisco', 
     state: 'CA', 
     zipcode: '94122', 
+    likes: 5, 
     category: 'food', 
-    image: 'https://lh3.googleusercontent.com/proxy/tMpwCV4-PfemUjokWH4-VkeokF-MITkEBfegg0LUEpsvb7QFCwW71wt1cAf1Vg4tv2_YAiowETe4fXFelfc_7p9aXoPjAvV0RLSKpA2hTdCGwGsAlZSC9jihbphj2QxllAWjk5fJ7FKlXJYAhmMlOgY17NVcRffsMX-_DTR42F4d', 
+    image: 'https://lh3.googleusercontent.com/proxy/YDGkTKS3ZK6qESqagAtP0ZifHUIRQGbQgdH7X4TSnvGd86JsntFbarigVBhOpbnSNMROtf_eAJi4repuMYHTq1mXybriYalTSy2cVQkoW8hD2UbrDvGq1dHNCYB31g-Zee3Pp2GIMVE', 
     description: 'Welcome to The Taco Shop at Underdogs a fusion experiment combining modern taqueria, amazing mexican food and sports, come join us!'
 })
-
 # user_activities
 ua1 = UserActivity.create({
     user_id: User.first.id, 

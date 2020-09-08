@@ -31,7 +31,3 @@ class Api::V1::CommentsController < ApplicationController
     params.require(:comment).permit(:id, :activity_id, :content)
   end
 end
-
-
-
-
