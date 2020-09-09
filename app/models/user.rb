@@ -1,8 +1,7 @@
 class User < ApplicationRecord
+  validates :name, presence: true
   # has_many :user_activities
   # has_many :activities, through: :user_activities
   # has_many :comments
   # has_many :activities, through: :comments
-
-
 end
