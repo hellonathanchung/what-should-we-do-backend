@@ -19,6 +19,16 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
+  def update 
+    comment = Comment.find(params[:id])
+
+    if comment.update(comment_params)
+      render json: comment
+    else
+      render json: { error: 'Something went wrong'}
+    end
+  end
+
   def destroy
     comment = Comment.find(params[:id])
     comment.destroy
