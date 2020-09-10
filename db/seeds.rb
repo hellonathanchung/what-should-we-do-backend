@@ -42,9 +42,9 @@ noa = User.create({
 # activities
 starbucks_roastery = Activity.create({
                                        name: 'Starbucks Roastery',
-                                       address: '2043 S 113th St #302',
+                                       address: '1124 Pike St',
                                        city: 'Seattle',
-                                       zipcode: '98168',
+                                       zipcode: '98101',
                                        state: 'WA',
                                        likes: 6,
                                        category: 'coffee',
@@ -53,7 +53,7 @@ starbucks_roastery = Activity.create({
                                      })
 underdogs = Activity.create({ name: 'The Taco Shop At Underdogs',
                               address: '1824 Irving St',
-                              city: 'SanFrancisco',
+                              city: 'San Francisco',
                               state: 'CA',
                               zipcode: '94122',
                               description: 'Welcome to The Taco Shop at Underdogs a fusion experiment combining modern taqueria, amazing mexican food and sports, come join us!',
