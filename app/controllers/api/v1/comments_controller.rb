@@ -9,33 +9,34 @@ class Api::V1::CommentsController < ApplicationController
     render json: comment
   end
 
-  def create 
+  def create
     comment = Comment.new(comment_params)
 
     if comment.save
-      render json: comment
+      comments = Comment.all.select { |com| com.activity_id == params[:activity_id] }
+      render json: comments
     else
-      render json: {error: 'Something went wrong'}
+      render json: { error: 'Something went wrong' }
     end
   end
 
-  def update 
+  def update
     comment = Comment.find(params[:id])
 
     if comment.update(comment_params)
       render json: comment
     else
-      render json: { error: 'Something went wrong'}
+      render json: { error: 'Something went wrong' }
     end
   end
 
   def destroy
     comment = Comment.find(params[:id])
     comment.destroy
-    render json: {message: 'Successfully deleted comment'}
+    render json: { message: 'Successfully deleted comment' }
   end
 
-  private   
+  private
 
   def comment_params
     params.require(:comment).permit(:id, :activity_id, :content)
