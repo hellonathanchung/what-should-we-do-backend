@@ -134,7 +134,7 @@ dog = Activity.create({
                         zipcode: '98125',
                         description: 'Shaded off-leash dog run in a park with fenced-off trails & open spaces & benches for owners.',
                         image: 'https://cosparkways-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/NorthacresOLA-300x165.jpg',
-                        category: 'dog park',
+                        category: 'dog-park',
                         likes: rand(50)
                       })
 benAndJerrys = Activity.create({
