@@ -1,26 +1,17 @@
-# README
+# What Should We Do
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**What is What We Should Do?**
 
-Things you may want to cover:
+What Should We Do is an activity journal that helps users log everywhere they visit.
 
-* Ruby version
+![what should we do img](https://i.imgur.com/9Cuydg6.png)
 
-* System dependencies
+**How To Install**
 
-* Configuration
+1. Clone the repository to your machine.
+2. `$ bundle install`
+3. `$ db:migrate`
+4. `$ db:seed`
+5. Run `rails s` to start the server.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# what-should-we-do-backend
-# what-should-we-do-backend
+To view the frontend, [click here](https://github.com/cohenoa33/what-should-we-do-frontend)
