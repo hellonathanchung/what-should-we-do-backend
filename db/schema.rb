@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_09_10_000953) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -30,14 +33,14 @@ ActiveRecord::Schema.define(version: 2020_09_10_000953) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
-    t.integer "activity_id", null: false
+    t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_comments_on_activity_id"
   end
 
   create_table "user_activities", force: :cascade do |t|
-    t.integer "activity_id", null: false
+    t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_user_activities_on_activity_id"
